@@ -1,5 +1,9 @@
 package br.devmpoda.capitulo01;
 
+import java.util.Arrays;
+import java.util.Collections;
+import java.util.List;
+
 public class BinarySearch {
 
 
@@ -15,6 +19,7 @@ public class BinarySearch {
             }
             if (chute > item) {
                 alto = meio - 1;
+
             } else {
                 baixo = meio + 1;
             }
@@ -23,8 +28,10 @@ public class BinarySearch {
     }
 
     public static void main(String[] args) {
-        int[] minhaLista = {1, 3, 5, 7, 9};
-        System.out.println(binarySearch(minhaLista, 3));
-        System.out.println(binarySearch(minhaLista, -1));
+        List<Integer> listaInteiros = Arrays.asList(1,5,8,10,12,16,19,24,26,46,84);
+        int[] minhaLista = {42,36,29,25,14,8,3,1};
+        int item = 24;
+        System.out.println(Collections.binarySearch(listaInteiros, item));
+        System.out.println(binarySearch(minhaLista, 8));
     }
 }
